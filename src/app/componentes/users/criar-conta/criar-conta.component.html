@@ -1,0 +1,56 @@
+<section class="section">
+    <h2 class="titulo">CRIAR CONTA</h2>
+    <form [formGroup]="formulario" class="inputs">
+            <div class="input-texts">
+                <label for="username-input">Username: <br></label>
+                <input
+                type="text"
+                name="username-input"
+                placeholder="Type your username"
+                formControlName="username"
+                >
+                <label class="mensagem-erro" *ngIf="formulario.get('username')?.errors && formulario.get('username')?.touched">
+                    Username is mandatory!
+                </label>
+            </div>
+            <div class="input-texts">
+                <label for="password-input">Password: <br></label>
+                <input
+                type="password"
+                name="password-input"
+                placeholder="Type your password"
+                formControlName="password"
+                >
+                <label class="mensagem-erro" *ngIf="formulario.get('password')?.errors?.['required'] && formulario.get('password')?.touched" >
+                    Password is mandatory!
+                </label>
+                <label class="mensagem-erro" *ngIf="formulario.get('password')?.errors?.['minlength'] && formulario.get('password')?.touched" >
+                    Password needs at least 3 characters!
+                </label>
+            </div>
+            <div class="input-texts">
+                <label for="confirm-password-input">Confirm Password: <br></label>
+                <input
+                type="password"
+                name="confirm-password-input"
+                placeholder="Type your password again"
+                formControlName="confirmPassword"
+                >
+                <label class="mensagem-erro" *ngIf="formulario.get('confirmPassword')?.value != formulario.get('password')?.value " >
+                    The passwords are not the same!
+                </label>
+            </div>
+            <div class="actions">
+                <button 
+                [disabled]="!formulario.valid"
+                [ngClass]="habilitarBotao()"
+                (click)="criarConta()"
+                >
+                Criar Conta
+                </button>
+                <label routerLink="/login">
+                    <u><i> Fazer login </i></u>
+                </label>
+            </div>
+    </form>
+</section>

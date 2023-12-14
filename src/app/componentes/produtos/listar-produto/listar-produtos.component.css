@@ -1,0 +1,122 @@
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);
+}
+
+.pesquisa{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 2.9rem 0rem 0rem 2rem;
+}
+
+.pesquisa__filtros {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    width: 70%;
+    gap: 1.25rem;
+    margin-left: 2rem;
+}
+
+.pesquisa__filtros__texto {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: var(--fonte-texto);
+    font-weight: 400;
+    font-size: 1.33rem;
+    color: var(--cor-terciaria);
+    gap: 1rem;
+    width: 20%
+}
+
+.pesquisa__filtros img {
+    width: 12%;
+    height: 60%;
+}
+
+.pesquisa__filtros select {
+    display: flex;
+    align-items: center ;
+    width: 7rem;
+    padding-left: 1%;
+    border-radius: 20px;
+    font-family: var(--fonte-texto);
+    font-weight: 400;
+    font-size: 1rem;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+
+.pesquisa__filtros__fieldset {
+    width: 35%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0.5rem;
+    gap: 4px;  
+    font-family: var(--fonte-texto);
+    font-weight: 400;
+    font-size: 1rem;
+    margin-left: 3rem;
+}   
+
+.pesquisa__filtros__fieldset legend {
+    font-size: 1.3rem;
+}
+
+.pesquisa__filtros input {
+    margin-right: 5px;
+}
+
+.pesquisa__barra {
+    display: flex;
+    flex-direction: row;
+    align-items: center;    
+    background-color: var(--cor-secundaria);
+    padding: 0.5% 0% 0.5% 1%;
+    width: 20%;    
+    border-radius: 20px;
+    margin-right: 2rem;
+    margin-left: 1rem;
+}
+
+.pesquisa__barra img {
+    width: 5%;
+}
+
+.pesquisa__barra__texto {
+    font-size: 1rem;
+    color: var(--cor-terciaria);   
+    background-color: var(--cor-secundaria);
+    padding: 0.5% 0% 0.5% 1%;
+    border: 1px;
+    outline: 0;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
+.produtos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.produtos__titulo {
+    font-family: var(--fonte-titulo);
+    font-size: 1.7rem;
+    color: var(--cor-terciaria);
+    margin-top: 2.9rem;
+    margin-bottom: 4rem;
+}
+
+.produtos__container {
+    max-width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  
+    gap: 1.2rem;
+}  

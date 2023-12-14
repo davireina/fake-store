@@ -1,0 +1,6 @@
+<header class ="cabecalho">
+    <img class="cabecalho__logo" src="assets\imagens\shopping-cart.png" alt="Logo-carrinho">
+    <h1 class="cabecalho__titulo">FAKE STORE</h1>
+    <img *ngIf="path === '/user/' + userId + '/listarProduto'" routerLink="/user/{{userId}}/listarProduto/bag" class="sacola" src="assets\imagens\sacola-de-compras.png" alt="imagem sacola de compras">
+    <button *ngIf="path === '/user/' + userId + '/listarProduto'" routerLink="/login">Log out</button>
+</header>

@@ -1,0 +1,115 @@
+.container__ver-produto {
+  background: var(--cor-primaria);
+  box-shadow: 8px 8px 0px 0px var(--cor-detalhes);
+  width: 50rem;
+  height: 30rem;
+  position: fixed;
+  left: 50%;
+  padding: 1.5rem;
+  top: 54%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nome-produto {
+  font-family: var(--fonte-titulo);
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  width: 80%;
+}
+
+.cancelar {
+  position: fixed;
+  right: 0;
+  margin-top: 0.5rem;
+  margin-right: 2.5rem;
+  width: 1rem;
+  cursor: pointer;
+}
+
+.info-left {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  justify-content: center;
+  width: 40%;
+  gap: 1rem;
+}
+
+.info-left__texto {
+  font-family: var(--fonte-texto);
+  font-size: 1.2rem;
+  width: 60%;
+  margin-left: 5.5rem;
+}
+
+.imagem-produto {
+  width: 60%;
+  margin-left: 4rem;
+  height: 13rem;
+  padding: 1.5rem;
+  border: 3px solid var(--cor-terciaria);
+}
+
+.info-left button {
+  height: 2.3rem;
+  width: 7rem;
+  font-family: var(--fonte-titulo);
+  font-size: 0.9rem;
+  color: var(--cor-detalhes);
+  background-color: var(--cor-primaria);
+  border: 2px solid var(--cor-detalhes);
+  border-radius: 4px;
+  padding: 2%;
+  margin-left: 8.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.info-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  right: 0;
+  margin-right: 4rem;
+  margin-top: 0.5rem;
+  height: 60%;
+  width: 50%;
+  gap: 1rem;
+}
+
+.info-right__texto {
+  font-family: var(--fonte-texto);
+  font-size: 1.1rem;
+  text-transform: capitalize;
+}
+
+.info-right__texto-descricao-g{
+  font-family: var(--fonte-texto);
+  font-size: 0.9rem;
+}
+
+.info-right__texto-descricao-p{
+  font-family: var(--fonte-texto);
+  font-size: 1rem;
+}
+
+.fundo {
+  background: var(--cor-terciaria);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  opacity: 0.5;
+}

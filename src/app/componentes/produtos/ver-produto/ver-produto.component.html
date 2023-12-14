@@ -1,0 +1,21 @@
+<div class="container__ver-produto">
+    <div class="header">
+        <p class="nome-produto"> {{ produto.title }}</p>
+        <img class="cancelar" src="assets/imagens/cancelar.png" alt="botao cancelar" routerLink="/user/{{userId}}/listarProduto">
+    </div>
+    <div class="info-left"> 
+        <img class="imagem-produto" src="{{produto.image}}" alt="imagem do produto">
+        <p class="info-left__texto"><b> Price: </b> ${{ produto.price.toFixed(2) }} </p>
+        <button
+        (click)="addBag()"
+        >
+        Add to bag</button>
+    </div>
+    <div class="info-right">
+        <p [ngClass]="classeDescricao()"><b> Description: </b> {{ produto.description }} </p>
+        <p class="info-right__texto"><b> Category: </b> {{ produto.category }} </p>
+        <p class="info-right__texto"><b> Rating: </b> {{ produto.rating.rate }} (<b>Number of reviews: </b> {{ produto.rating.count }}) </p>
+    </div>
+</div>
+<div class="fundo"></div>
+  

@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@700&display=swap');
+
+:root {
+    --cor-primaria: #FFFFFF;
+    --cor-secundaria: #E7E6E6; 
+    --cor-terciaria: #000000;
+    --cor-detalhes: #EB745D;
+
+    --fonte-titulo: 'Poppins', sans-serif;
+    --fonte-texto: 'Amiri', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+

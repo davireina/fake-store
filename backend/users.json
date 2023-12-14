@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "username": "davi",
+      "password": "123",
+      "confirmPassword": "123",
+      "bag": {
+        "products": {
+          "1": 2,
+          "2": 1,
+          "3": 2,
+          "6": 2
+        }
+      },
+      "id": 1
+    },
+    {
+      "username": "Joao",
+      "password": "abc",
+      "confirmPassword": "abc",
+      "bag": {
+        "products": {
+          "2": 1
+        }
+      },
+      "id": 2
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+<div class="pesquisa">
+    <div class="pesquisa__filtros">
+        <p class="pesquisa__filtros__texto">Filters
+            <img src="assets/imagens/filtro.png" alt="simbolo-filtro">
+        </p>
+        <p class="pesquisa__filtros__texto">Price
+            <select class="pesquisa__filtros_select" [(ngModel)]="filtroPreco" (change)="listarProdutos()">
+                <option value="">---</option>
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </select>
+        </p>
+        <fieldset class="pesquisa__filtros__fieldset">
+            <label *ngFor="let categoria of listaCategorias">
+                <input 
+                type="checkbox"
+                [value]="categoria"
+                [(ngModel)]="categoriaChecker[categoria]"
+                (change)="listarProdutos()"
+                >
+                {{categoria}}   
+            </label>
+            <legend>Categories</legend>
+        </fieldset>
+    </div>
+    <div class="pesquisa__barra">
+        <img class="pesquisa__barra__imagem" src="assets/imagens/lupa.png" alt="simbolo-pesquisa">
+        <input
+        type="search"
+        class="pesquisa__barra__texto"
+        placeholder="Search"
+        [(ngModel)]="filtroNome"
+        (keyup)="listarProdutos()"
+        >
+    </div>  
+</div>
+<section class="produtos" *ngIf="listaProduto.length > 0">
+    <h2 class="produtos__titulo">PRODUCTS</h2>
+    <div class="produtos__container">
+        <app-produto 
+            *ngFor="let produto of listaProduto"
+            [produto]="produto"
+        ></app-produto>
+    </div>
+</section>
+<app-bag *ngIf="path === '/user/' + userId + '/listarProduto/bag'"></app-bag>

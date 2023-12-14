@@ -1,0 +1,42 @@
+<section class="section">
+    <h2 class="titulo">LOGIN</h2>
+    <form [formGroup]="formulario" class="inputs">
+            <div class="input-texts">
+                <label>Username: <br></label>
+                <input
+                type="text"
+                name="username-input"
+                placeholder="Type your username"
+                formControlName="username"
+                >
+                <label class="mensagem-erro" *ngIf="formulario.get('username')?.errors && formulario.get('username')?.touched">
+                    Username is mandatory!
+                </label>
+            </div>
+            <div class="input-texts">
+                <label>Password: <br></label>
+                <input
+                type="password"
+                name="password-input"
+                placeholder="Type your password"
+                formControlName="password"
+                >
+                <label class="mensagem-erro" *ngIf="formulario.get('password')?.errors?.['required'] && formulario.get('password')?.touched" >
+                    Password is mandatory!
+                </label>
+            </div>
+            <div class="actions">
+                <button 
+                [disabled]="validarUser() === false"
+                [ngClass]="habilitarBotao()"
+                (click)="validarUser()"
+                routerLink="/user/{{userId}}/listarProduto"
+                >
+                Login
+                </button>
+                <label routerLink="/criarConta">
+                    <u><i> Criar conta </i></u>
+                </label>
+            </div>
+    </form>
+</section>

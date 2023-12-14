@@ -1,0 +1,5 @@
+<div class="produtos__container__box" routerLink="/user/{{userId}}/verProduto/{{produto.id}}">
+    <img class="produtos__container__imagem" src="{{ produto.image }}" alt="imagem produto {{produto.id}}">
+    <h2 class="produtos__container__nome"> {{ produto.title }} </h2>
+    <p class="produtos__container__preco"> ${{ produto.price.toFixed(2) }} </p>
+</div>  

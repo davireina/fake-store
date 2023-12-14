@@ -1,0 +1,37 @@
+<section class="bag">
+    <div class="header">
+        <img class="cancelar" src="assets/imagens/cancelar.png" alt="botao cancelar" routerLink="/user/{{userId}}/listarProduto">
+        <h1 class="title"> YOUR BAG </h1>
+    </div>
+    <div class="products-container">
+        <div class="products" *ngFor="let produto of listaProdutos; let i = index">
+            <img class="product-image" src="{{ produto.image }}" alt="imagem do produto">
+            <div class="product-info">
+                <p><b> {{ produto.title }} </b></p>
+                <p> ${{ produto.price.toFixed(2) }} </p>
+                <input 
+                type="number"
+                min=1 
+                [(ngModel)]="quantities[i]"
+                (change)="updateQuantities(produto.id, i)"
+                class="product-quantity"
+                >
+            </div>
+            <img 
+            class="product-remove" 
+            src="assets/imagens/lixo.png" 
+            alt="imagem remover produto"
+            (click)="removeProduct(produto.id, i)"
+            >        
+        </div>
+    </div>
+    <div class="total">
+        <p class="price">Total: ${{ price.toFixed(2) }}</p>
+        <button 
+        [disabled]="listaProdutos.length === 0"
+        [ngClass]="habilitarBotao()"
+        (click)="finishPurchase()"
+        >
+        Purchase</button>
+    </div>
+</section>
