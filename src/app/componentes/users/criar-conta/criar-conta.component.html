@@ -36,7 +36,7 @@
                 placeholder="Type your password again"
                 formControlName="confirmPassword"
                 >
-                <label class="mensagem-erro" *ngIf="formulario.get('confirmPassword')?.value != formulario.get('password')?.value " >
+                <label class="mensagem-erro" *ngIf="formulario.get('confirmPassword')?.value != formulario.get('password')?.value && formulario.get('confirmPassword')?.touched">
                     The passwords are not the same!
                 </label>
             </div>
